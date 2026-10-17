@@ -1,0 +1,30 @@
+{
+  "expected_count": 3,
+  "actual_count": 2,
+  "true_positives": 2,
+  "false_positives": 0,
+  "false_negatives": 1,
+  "precision": 1.0,
+  "recall": 0.667,
+  "f1_score": 0.8,
+  "matches": [
+    {
+      "expected": "password",
+      "actual_title": "Hard‑coded database connection string with credentials",
+      "file_path": "Customer.Infrastructure/CustomerRepository.cs"
+    },
+    {
+      "expected": "null",
+      "actual_title": "NullReferenceException risk in GetCustomerName",
+      "file_path": "Customer.Api/Services/CustomerService.cs"
+    }
+  ],
+  "missing_findings": [
+    {
+      "category": "Architecture",
+      "file_path": "Customer.Api/Controllers/CustomerController.cs",
+      "keyword": "business logic"
+    }
+  ],
+  "unmatched_actual_findings": []
+}

@@ -1,0 +1,36 @@
+{
+  "expected_count": 3,
+  "actual_count": 3,
+  "true_positives": 2,
+  "false_positives": 1,
+  "false_negatives": 1,
+  "precision": 0.667,
+  "recall": 0.667,
+  "f1_score": 0.667,
+  "matches": [
+    {
+      "expected": "password",
+      "actual_title": "Hard‑coded database credentials",
+      "file_path": "Customer.Infrastructure/CustomerRepository.cs"
+    },
+    {
+      "expected": "null",
+      "actual_title": "NullReferenceException risk in CustomerService",
+      "file_path": "Customer.Api/Services/CustomerService.cs"
+    }
+  ],
+  "missing_findings": [
+    {
+      "category": "Architecture",
+      "file_path": "Customer.Api/Controllers/CustomerController.cs",
+      "keyword": "business logic"
+    }
+  ],
+  "unmatched_actual_findings": [
+    {
+      "category": "Maintainability",
+      "title": "Unreachable NotFound branch in GetCustomer endpoint",
+      "file_path": "Customer.Api/Controllers/CustomerController.cs"
+    }
+  ]
+}
